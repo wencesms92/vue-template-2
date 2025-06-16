@@ -1,5 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+
+const envVar = import.meta.env.VITE_API_URL || 'No API URL';
+const envVar2 = import.meta.env.VITE_BACKEND_URL || 'No BACKEND URL';
 </script>
 
 <template>
@@ -9,6 +12,8 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+      <p>envVar: {{ envVar }}</p>
+      <p>envVar2: {{ envVar2 }}</p>
     </a>
   </div>
   <HelloWorld msg="My frontend application" />
